@@ -50,12 +50,12 @@ Say Hi to the  Styled Framework :)
 ## Features
 **- Global Variables**
 ```javascript
- <Div styled={{
-      width: "100px",
-      height: "100px",
-      padding: "SPACING_S",
-      backgroundColor: "COLOR_BACKGROUND"
-    }}>
+<Div styled={{
+  width: "100px",
+  height: "100px",
+  padding: "SPACING_S",
+  backgroundColor: "COLOR_BACKGROUND"
+}}>
 </Div>
 ```  
 
@@ -74,7 +74,7 @@ Say Hi to the  Styled Framework :)
 <Div styled={{
   container: {isDark: true, isTab: false}
 }}>
-    Custom CSS attributes with multiple parameters
+  Custom CSS attributes with multiple parameters
 </Div>
 ```
 
@@ -108,9 +108,9 @@ const {View} = styled; // react native
 
 **- Any component can be styled**
 ```javascript
-  import {createStyledComponent} from "styled-framework"
-  const AnyComponentStyled = createStyledComponent(AnyComponent); // any custom component
-  <AnyComponentStyled styled={{...}} />
+import {createStyledComponent} from "styled-framework"
+const AnyComponentStyled = createStyledComponent(AnyComponent); // any custom component
+<AnyComponentStyled styled={{...}} />
 ```
 
 **- Accessing component properties from css**
@@ -154,9 +154,9 @@ export default createTheme({
   COLOR_ERROR: "#DB4437",
   COLOR_BACKGROUND: "#F2F2F2",
   COLOR_ACCENT_DISABLED: "rgba(83,51,128,0.6)",
-  // font size
+  // font
   FONT_FAMILY: "Damascus",
-},{
+}, {
   // here you can define any custom css attributes (functions) you want to use in your application, for example:
   scale: value => ({
     transform: `scale(${value})`
@@ -165,7 +165,7 @@ export default createTheme({
     justifyContent: "center",
     alignItems: "center"
   }),
- container: ({isDark, isTab}) => ({
+  container: ({isDark, isTab}) => ({
     flex: 1,
     display: "flex",
     boxShadow: "SHADOW_DEFAULT",
@@ -191,7 +191,6 @@ export default createTheme({
     color: "#FFF"
   }),
 })
-
 ```
 
 **2- Wrap your react application with a `ThemeProvider` and pass your theme**
