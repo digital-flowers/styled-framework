@@ -157,7 +157,7 @@ export default createTheme({
   // font size
   FONT_FAMILY: "Damascus",
 },{
-// here you can define any custom css attributes (functions) you want to use in your application, for example:
+  // here you can define any custom css attributes (functions) you want to use in your application, for example:
   scale: value => ({
     transform: `scale(${value})`
   }),
@@ -178,7 +178,18 @@ export default createTheme({
       backgroundColor: isDark ? "COLOR_ACCENT_2" : "#F2F2F2",
       color: isDark ? "#FFF" : "COLOR_ACCENT_2",
     } : null)
-  })
+  }),
+  // you can also use the 2nd parameter to access the component properties ;)  
+  button: ({isPrimary, isLarge}, props) => ({
+    backgroundColor: isPrimary ? (props.disabled ? "COLOR_ACCENT_DISABLED" : "COLOR_ACCENT") : "transparent",
+    marginVertical: isPrimary ? "SPACING_S" : "0",
+    padding: isLarge ? "SPACING_S" : "SPACING_XS",
+    overflow: "hidden",
+    borderRadius: "3px",
+    flexDirection: "row",
+    justifyContent: "center",
+    color: "#FFF"
+  }),
 })
 
 ```
