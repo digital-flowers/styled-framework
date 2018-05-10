@@ -1,0 +1,52 @@
+{
+  "name": "styled-framework",
+  "version": "1.0.0",
+  "description": "Build your own dynamic CSS language for both react and react native. By building variables and custom css attributes no need for unnecessary components or properties. It's fun, easy, extendable and powered by styled components.",
+  "main": "lib/index.js",
+  "scripts": {
+    "compile": "babel -d ./lib ./src --copy-files",
+    "start:example": "webpack-dev-server",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digital-flowers/styled-framework.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "css-in-js",
+    "styled-components",
+    "framework",
+    "css-variables",
+    "custom-css-attributes"
+  ],
+  "author": "Fareed Alnamrouti <digital.flowers@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/digital-flowers/styled-framework/issues"
+  },
+  "homepage": "https://github.com/digital-flowers/styled-framework#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-loader": "^7.1.4",
+    "mocha": "^3.4.1",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4",
+    "html-webpack-plugin": "^3.2.0"
+  },
+  "dependencies": {
+    "name-util": "^1.1.0",
+    "prop-types": "^15.6.1",
+    "styled-components": "^3.2.6"
+  }
+}
