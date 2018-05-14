@@ -1,6 +1,6 @@
 {
   "name": "styled-framework",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Build your own dynamic CSS language for both react and react native. By building variables and custom css attributes no need for unnecessary components or properties. It's fun, easy, extendable and powered by styled components.",
   "main": "lib/index.js",
   "scripts": {

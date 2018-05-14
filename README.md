@@ -8,7 +8,7 @@ Build your own dynamic CSS rules for both react and react native. By defining yo
 ## Why?
 Inline styles in react are very powerful and easy to use but at the sametime we all know it has many limitations, such as:
 
-**1- No global variables !!!**
+**1- No global theme variables**
 ```javascript
 <div style={{
     backgroundColor: "red"
@@ -16,18 +16,18 @@ Inline styles in react are very powerful and easy to use but at the sametime we 
 </div>
 ```
 
-**2- You need css classes to avoid repetitive style !!!**
+**2- You need css classes to avoid repetitive style**
 ```javascript
 <div className="container center-content">
 </div>
 ```
 
-**3- Sometimes developer mix styling properties with behavior properties !!!**
+**3- Sometimes developer mix styling properties with behavior properties**
 ```javascript
 <CustomComponent backgroundColor="red" active={true} />
 ```
 
-**4- Not cross platform by default !!!**
+**4- Not cross platform by default**
 ```javascript
 <div style={{
     animationDuration:"0.5s",
@@ -38,7 +38,7 @@ Inline styles in react are very powerful and easy to use but at the sametime we 
 }}>
 </div>
 ```
-**5- Many unnecessary components!!!**
+**5- Many unnecessary components**
 ```javascript
 <Button />
 <SpecialButton />
@@ -198,7 +198,9 @@ export default createTheme({
 // app.js
 import React, {Component} from "react";
 import PropTypes from "prop-types";
+import {ThemeProvider} from "styled-framework";
 import theme from "./theme";
+
 export class App extends Component {
   render() {
     return (
